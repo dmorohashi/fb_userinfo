@@ -6,10 +6,10 @@ require 'mechanize'
 
 agent = Mechanize.new
 # Read in a page
-page = agent.get("http://foo.com")
+page = agent.get("https://www.facebook.com/tetsuya.ito")
 #
 # Find somehing on the page using css selectors
-p page.at('div.content')
+p page.at('ul.uiList.fbProfileEditExperiences._4kg._4ks')
 #
 # Write out to the sqlite database using scraperwiki library
 ScraperWiki.save_sqlite(["name"], {"name" => "susan", "occupation" => "software developer"})
